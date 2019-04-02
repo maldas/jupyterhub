@@ -1,6 +1,6 @@
 # jupyterhub
 
-#To start Server Single Node
+To start Single node server on a VM
 
 cd /etc/jupyterhub
 
@@ -23,3 +23,6 @@ kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"templat
 helm init --service-account tiller --upgrade
 
 helm upgrade --install $RELEASE jupyterhub/jupyterhub --namespace $NAMESPACE --version=0.8.0 --values config.yaml
+
+# docker
+for more info check https://github.com/maldas/hubuser/blob/master/Dockerfile
