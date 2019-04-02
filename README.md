@@ -1,8 +1,14 @@
 # jupyterhub
 
 #To start Server Single Node
+
 cd /etc/jupyterhub
+
 sudo -u hubuser jupyterhub --JupyterHub.spawner_class=sudospawner.SudoSpawner --ip=0.0.0.0 --port=8888 --debug &
+
+# Kubernetes
+
+gcloud container clusters get-credentials skdtech-cluster --zone us-central1-a --project endless-elysium-231508
 
 RELEASE=jhub
 
