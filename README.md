@@ -26,3 +26,12 @@ helm upgrade --install $RELEASE jupyterhub/jupyterhub --namespace $NAMESPACE --v
 
 # docker
 for more info check https://github.com/maldas/hubuser/blob/master/Dockerfile
+
+
+
+# Debug 
+
+kubectl get pod --namespace jhub
+
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash
+
