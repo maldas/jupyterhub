@@ -14,6 +14,8 @@ RELEASE=jhub
 
 NAMESPACE=jhub
 
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+
 kubectl create serviceaccount --namespace kube-system tiller
 
 kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
